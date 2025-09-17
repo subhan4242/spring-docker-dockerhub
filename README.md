@@ -7,61 +7,10 @@
 * Vi skal bli kjent med både Docker hub og AWS ECR
 * Vi skal også sette opp en CI pipeline for å automatisk bygge et nytt container image på hver push til main branch.
 
-## Lag en fork
+## Lag en fork og et Codespace
 
-Du må start med å lage en fork av dette repoet til din egen GitHub konto. 
-
-
-## Logg i Cloud 9 miljøet ditt
-
-* URL for innlogging er https://244530008913.signin.aws.amazon.com/console
-* Logg på med brukernavn og passord gitt i klassrommet
-* Gå til tjenesten Cloud9 (Du nå søke på Cloud9 uten mellomrom i søket)
-* Velg "My environments" - pass på at du er i Ireland region.
-* Velg "Open IDE"
-
-
-## Lag en klone av din Fork av dette repoet, og kjør git clone i cloud 9 
-
-# Terminal i Cloud 9. Klone repository med HTTPS URL. Eksempel ;
-```
-git clone https://github.com/≤github bruker>/spring-docker-dockerhub.git
-```
-Får du denne feilmeldingen ```bash: /spring-docker-dockerhub: Permission denied``` - så glemte du å bytte ut <github bruker> med
-ditt eget Github brukernavn :-)
-
-
-### Lag et Access Token for GitHub
-
-Du kan hoppe over dette steget hvis du allerede har laget et Token
-
-* Når du skal autentisere deg mot din GitHub konto fra Cloud 9 trenger du et access token.  Gå til  https://github.com/settings/tokens og lag et nytt.
-* Velg "Classic"
-* Gi token et navn, det skal også ha "repository", og "workflow" rettigheter
-* NB. Ta vare på tokenet et sted, du trenger dette senere når du skal gjøre ```git push```
-
-
-
-
-## Konfigurer Git i Cloud9
-
-(NB! Det kan hende du har gjort dette før, du kan da hoppe over stegene)
-
-Følgende steg trenger du bare gjøre en gang i Cloud9 miljøet ditt. Du kan hoppe over hele steget hvis du har gjort det tidligere.
-For å slippe å autentisere seg hele tiden kan man få git til å cache nøkler i et valgfritt antall sekunder på denne måten.
-
-```shell
-git config --global credential.helper "cache --timeout=86400"
-```
-
-Konfigurer også brukernavnet og eposten din for GitHub CLI. Da slipepr du advarsler i terminalen
-når du gjør commit senere.
-
-````shell
-git config --global user.name <github brukernavn>
-git config --global user.email <email for github bruker>
-
-````
+* Dette begynner å bli kjent nå, right? 
+* Du må start med å lage en fork av dette repoet til din egen GitHub konto. 
 
 #  "Dockerize"  en Spring Boot applikasjon og push til Docker hub
 
