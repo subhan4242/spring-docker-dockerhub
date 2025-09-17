@@ -181,8 +181,8 @@ Del gjerne Docker hub container image navnet med andre, så de kan forsøke å k
 
 ## Lag et AWS  ECR repository for din container
 
-Finn ut av det selv :-) Kan du gjøre det fra AWS CLI istedet for UI?  Velg et navn med dine initialer, så
-vi ikke får navnekonflikter. 
+* Før du går videre må du konfigurere "Codespaces" Accessnøkler for AWS. 
+* Du kan lage et ECR repository fra kommandlinje med `àws ecr ...` eller fra AWS Console. Du velger, men du må finne ut hvordan du gjør det selv. 
 
 ## Autentiser docker mot AWS ECR
 
