@@ -95,20 +95,20 @@ Docker-kommandoen docker images rm brukes  til å slette et container image.
 
 Sjekk at du kan kjøre Spring Boot applikasjonen med Maven 
 ```
-cd spring-docker-dockerhub
 mvn spring-boot:run
 ```
 
-Sjekk at applikasjonen kjører. Åpne en ny terminal i Cloud 9 og kjør  
+* Sjekk at applikasjonen kjører. 
+* Åpne en ny terminal i ditt cosepace og kjør  
 ```
 curl localhost:8080                                                                                                            
 ```
-
-Hvis du vil kan du også velge Tools/Preview running application fra menyen i Cloud 9 istedet.
+Den skal bare svare "Hello" 
 
 Nå skal vi lage en Dockerfile for Spring Boot-applikasjonen. Vi skal bruke en "multi stage" Docker fil, som 
-først lager en container som har alle verktøy til å bygge applikasjonen, maven osv. Spring boot applikasjonen blir kompilert og bygget i denne containeren. 
-Deretter bruker den resultatet fra byggeprosessen, JAR filen til å lage en runtime container for applikasjonen. 
+først lager en container som har alle verktøy til å bygge applikasjonen, maven osv.
+
+Spring boot applikasjonen blir kompilert og bygget i denne containeren.  Deretter bruker den resultatet fra byggeprosessen, JAR filen til å lage en runtime container for applikasjonen. 
 
 Ta gjerne en pause og les gjerne mer om multi stage builds her; https://docs.docker.com/develop/develop-images/multistage-build/
 
@@ -133,37 +133,35 @@ ENTRYPOINT ["java", "-jar", "/app/application.jar"]
 Prøv å bygge en Docker container
 
 ```sh
-    docker build . --tag <give the image a name>
+    docker build . --tag <du bestemmer tag eller navn>
 ```
 
 Du må først huske å avslutte (Ctrl+c) applikasjonen du started med maven.
 Prøv å starte en container basert dette container image.  
 ```sh
-docker run <image tag used above>
+docker run <tag eller navn som brukt over>
 ```
 
 Når du starter en container, så lytter ikke applikasjonen i Cloud 9 på port  8080. Hvorfor ikke ? Hint; port mapping 
+
+### Oppgave
+
 Kan du start to versjoner av samme container, hvor en lytter på port 8080 og den andre på 8081?
 
 ## Registrer deg på Docker hub
-
-!Viktig! Passordet ditt til Dockerhub blir liggende på EC2 Instansen (Serveren) i AWS, og i utgangspunktet kan alle dine medstudenter 
-logge seg inn i ditt Cloud9 miljø, siden vi deler passord. Jeg vil derfor anbefale å lage en helt ny DockerHub bruker for PGR301, og 
-ikke bruke et passord du vanligvis bruker. 
 
 https://hub.docker.com/signup
 
 ### Lag et security token på Docker hub
 
-Når du autentiserer deg mot Dockerhub fra Cloud9, er det beste praksis å ikke benytte passord men et Token. Et token kan du lage ved å klikke på 
-ditt profilbilde (øverst til høyre) - og deretter "Account Settings", Personal Access tokens, og Generate Token. 
+Du lager er token ved å trykke på ditt profilbilde (øverst til høyre) - og deretter "Account Settings", Personal Access tokens, og Generate Token. 
 
 * Gi tokenet et navn og read/write/delete permissions.
 
 ## Bygg en container og push til Docker hub 
 
 ```
-docker login
+docker login -u <ditt brukernavn>
 docker tag <tag> <dockerhub_username>/<tag_remote>
 docker push <username>/<tag_remote>
 ```
@@ -186,9 +184,9 @@ Del gjerne Docker hub container image navnet med andre, så de kan forsøke å k
 Finn ut av det selv :-) Kan du gjøre det fra AWS CLI istedet for UI?  Velg et navn med dine initialer, så
 vi ikke får navnekonflikter. 
 
-# Autentiser Docker i ditt Cloud 9 miljø mot AWS ECR
+# Autentiser docker mot AWS ECR
 
-Fra dit Cloud9 miljøe, autentiser docker mot AWS ECR med kommandoen
+Du kan gjøre dette ved å kjøre
 ```
 aws ecr get-login-password --region eu-west-1 | docker login --username AWS --password-stdin 244530008913.dkr.ecr.eu-west-1.amazonaws.com
 ````
@@ -213,7 +211,6 @@ get-login-password er en AWS-kommando som returnerer et passord som er nødvendi
 
 Eksempel:
 ```sh
-
 docker build -t <ditt tagnavn> .
 docker tag <ditt tagnavn> 244530008913.dkr.ecr.eu-west-1.amazonaws.com/<ditt ECR repo navn>
 docker push 244530008913.dkr.ecr.eu-west-1.amazonaws.com/<ditt ECR repo navn>
@@ -228,7 +225,7 @@ For å lage github actions workflows lager du en fil under .github/workflows kat
 Her er et eksempel på en workflow tatt fra foreleser sitt miljø, du må gjøre endringer for å tilpasse den ditt eget? 
 Lykke til!
 
-NB. Du må først legge til Repository secrets for å gi GitHub actions AWS nøkler!
+NB. Du må først legge til Repository secrets for å gi GitHub "actions" AWS nøkler!
 
 ```yaml
 name: Publish Docker image
