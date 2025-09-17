@@ -51,7 +51,7 @@ Kjør kommandoen
 ```aidl
 docker images
 ```
-Du vil se at Docker har lastet ned et *hello-world* container image til Cloud 9 miljøet ditt. 
+Du vil se at Docker har lastet ned et *hello-world* container image. 
 Vi skal nå slette dette, men vi må først fjerne en stoppet container som er basert på dette imaget
 
 Kjør først kommandoen ```docker ps``` for å se hvilke containere som kjører. Du vil få en tom liste
@@ -93,7 +93,7 @@ docker image rm <REPOSITORY>
 
 Docker-kommandoen docker images rm brukes  til å slette et container image.
 
-Installer maven i Cloud 9. Vi skal forsøke å kjøre Spring Boot applikasjonen fra Maven i terminalen
+Installer Maven. Vi skal forsøke å kjøre Spring Boot applikasjonen fra Maven i terminalen
 
 ```
 sudo wget http://repos.fedorapeople.org/repos/dchen/apache-maven/epel-apache-maven.repo -O /etc/yum.repos.d/epel-apache-maven.repo
