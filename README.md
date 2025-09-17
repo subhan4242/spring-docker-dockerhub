@@ -12,7 +12,7 @@
 * Dette begynner å bli kjent nå, right? 
 * Du må start med å lage en fork av dette repoet til din egen GitHub konto. 
 
-#  "Dockerize"  en Spring Boot applikasjon og push til Docker hub
+# Lag container av en Spring Boot applikasjon og push til Docker hub
 
 Verifiser at Docker er installert i Cloud 9
 
