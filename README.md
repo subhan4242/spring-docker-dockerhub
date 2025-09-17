@@ -184,7 +184,7 @@ Del gjerne Docker hub container image navnet med andre, så de kan forsøke å k
 Finn ut av det selv :-) Kan du gjøre det fra AWS CLI istedet for UI?  Velg et navn med dine initialer, så
 vi ikke får navnekonflikter. 
 
-# Autentiser docker mot AWS ECR
+## Autentiser docker mot AWS ECR
 
 Du kan gjøre dette ved å kjøre
 ```
