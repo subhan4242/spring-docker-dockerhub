@@ -112,7 +112,7 @@ Spring boot applikasjonen blir kompilert og bygget i denne containeren.  Derette
 
 Ta gjerne en pause og les gjerne mer om multi stage builds her; https://docs.docker.com/develop/develop-images/multistage-build/
 
-Kopier dette innholder inn i en  ```Dockerfile``` i rotkatalogen
+Kopier dette innholder inn i en ny fil som skal hete  ```Dockerfile``` i rotkatalogen i ditt workspace
 
 ```dockerfile
 
