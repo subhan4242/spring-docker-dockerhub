@@ -93,14 +93,6 @@ docker image rm <REPOSITORY>
 
 Docker-kommandoen docker images rm brukes  til å slette et container image.
 
-Installer Maven. Vi skal forsøke å kjøre Spring Boot applikasjonen fra Maven i terminalen
-
-```
-sudo wget http://repos.fedorapeople.org/repos/dchen/apache-maven/epel-apache-maven.repo -O /etc/yum.repos.d/epel-apache-maven.repo
-sudo sed -i s/\$releasever/6/g /etc/yum.repos.d/epel-apache-maven.repo
-sudo yum install -y apache-maven
-```
-
 Sjekk at du kan kjøre Spring Boot applikasjonen med Maven 
 ```
 cd spring-docker-dockerhub
