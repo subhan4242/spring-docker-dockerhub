@@ -133,7 +133,7 @@ ENTRYPOINT ["java", "-jar", "/app/application.jar"]
 Prøv å bygge en Docker container
 
 ```sh
-    docker build . --tag <du bestemmer tag eller navn>
+docker build . --tag <du bestemmer tag eller navn>
 ```
 
 Prøv å starte en container basert dette container image.  
