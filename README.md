@@ -14,7 +14,7 @@
 
 # Lag container av en Spring Boot applikasjon og push til Docker hub
 
-Verifiser at Docker er installert i Cloud 9
+Verifiser at Docker er installert i ditt codespace
 
 ```docker run hello-world``` 
 
@@ -142,7 +142,7 @@ Prøv å starte en container basert dette container image.
 docker run <tag eller navn som brukt over>
 ```
 
-Når du starter en container, så lytter ikke applikasjonen i Cloud 9 på port  8080. Hvorfor ikke ? Hint; port mapping 
+Når du starter en container, så lytter ikke applikasjonen på port 8080. Hvorfor ikke ? Hint; port mapping 
 
 ### Oppgave
 
