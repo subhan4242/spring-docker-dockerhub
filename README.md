@@ -12,6 +12,15 @@
 * Dette begynner å bli kjent nå, right? 
 * Du må start med å lage en fork av dette repoet til din egen GitHub konto. 
 
+## Installer AWS CLI i ditt codespace 
+
+```
+curl "https://awscli.amazonaws.com/awscli-exe-linux-x86_64.zip" -o "awscliv2.zip"
+unzip awscliv2.zip
+sudo ./aws/install
+```
+
+
 # Lag container av en Spring Boot applikasjon og push til Docker hub
 
 Verifiser at Docker er installert i ditt codespace
@@ -146,7 +155,6 @@ Når du starter en container, så lytter ikke applikasjonen på port 8080. Hvorf
 ### Oppgave
 
 Kan du start to versjoner av samme container, hvor en lytter på port 8080 og den andre på 8081?
-
 
 
 ## Registrer deg på Docker hub
