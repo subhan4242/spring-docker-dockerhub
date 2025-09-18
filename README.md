@@ -147,6 +147,8 @@ Når du starter en container, så lytter ikke applikasjonen på port 8080. Hvorf
 
 Kan du start to versjoner av samme container, hvor en lytter på port 8080 og den andre på 8081?
 
+
+
 ## Registrer deg på Docker hub
 
 https://hub.docker.com/signup
@@ -178,9 +180,12 @@ Gå til dockerhub.com og se på container image du nettopp lastet opp.
 
 Del gjerne Docker hub container image navnet med andre, så de kan forsøke å kjøre det med ```docker run``` mitt container image heter ```glennbech/shaky```
 
+## Konfigurere AWS Access keys for Codespaces 
+
+Før du går videre må du konfigurere "Codespaces" Accessnøkler for AWS. 
+
 ## Lag et AWS  ECR repository for din container
 
-* Før du går videre må du konfigurere "Codespaces" Accessnøkler for AWS. 
 * Du kan lage et ECR repository fra kommandlinje med `àws ecr ...` eller fra AWS Console. Du velger, men du må finne ut hvordan du gjør det selv. 
 
 ## Autentiser docker mot AWS ECR
