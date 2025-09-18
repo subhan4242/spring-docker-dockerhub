@@ -101,7 +101,7 @@ Du kan teste dette med;
 docker image rm <IMAGE ID>
 ```
 
-# Docker
+# Docker Image
 
 Først; Sjekk at du kan kjøre Spring Boot applikasjonen med Maven 
 ```
