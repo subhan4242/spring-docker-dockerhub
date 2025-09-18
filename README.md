@@ -136,7 +136,6 @@ Prøv å bygge en Docker container
     docker build . --tag <du bestemmer tag eller navn>
 ```
 
-Du må først huske å avslutte (Ctrl+c) applikasjonen du started med maven.
 Prøv å starte en container basert dette container image.  
 ```sh
 docker run <tag eller navn som brukt over>
