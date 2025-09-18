@@ -101,7 +101,9 @@ Du kan teste dette med;
 docker image rm <IMAGE ID>
 ```
 
-Sjekk at du kan kjøre Spring Boot applikasjonen med Maven 
+# Docker
+
+Først; Sjekk at du kan kjøre Spring Boot applikasjonen med Maven 
 ```
 mvn spring-boot:run
 ```
