@@ -88,19 +88,18 @@ Slett den stoppede containeren med
 docker rm <container id> - i eksemplet over 5a89931c5af6
 ```
 
-Docker-kommandoen docker rm brukes til å fjerne en eller flere stoppede containere. Kommandoen fjerner ikke kjørende containere; den fungerer kun på stoppede containere, men du kan overstyre dette med 
+OBS, og til info; Docker-kommandoen docker rm brukes til å fjerne en eller flere stoppede containere. Kommandoen fjerner ikke kjørende containere; den fungerer kun på stoppede containere, men du kan overstyre dette med 
 
 ```
-docker rm -f [container_id]
+docker rm -f <container id> 
 ```
 
-Kjør ```docker images``` igjen, og kjør kommandoen 
+Kjør ```docker images``` igjen. Docker-kommandoen docker images rm brukes  til å slette et container image.
+Du kan teste dette med;
 
 ```aidl
-docker image rm <REPOSITORY>
+docker image rm <IMAGE ID>
 ```
-
-Docker-kommandoen docker images rm brukes  til å slette et container image.
 
 Sjekk at du kan kjøre Spring Boot applikasjonen med Maven 
 ```
