@@ -195,6 +195,7 @@ Før du går videre må du konfigurere "Codespaces" Accessnøkler for AWS.
 
 ## Lag et AWS  ECR repository for din container
 
+* Pass på at du er i AWS region eu-west-1
 * Du kan lage et ECR repository fra kommandlinje med `àws ecr ...` eller fra AWS Console. Du velger, men du må finne ut hvordan du gjør det selv. 
 
 ## Autentiser docker mot AWS ECR
