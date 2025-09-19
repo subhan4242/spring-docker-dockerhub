@@ -20,6 +20,6 @@ jobs:
         run: |
           aws ecr get-login-password --region eu-west-1 | docker login --username AWS --password-stdin 244530008913.dkr.ecr.eu-west-1.amazonaws.com
           rev=$(git rev-parse --short HEAD)
-          docker build . -t subhan-test
-          docker tag subhan-test 244530008913.dkr.ecr.eu-west-1.amazonaws.com/subhan-test
-          docker push 244530008913.dkr.ecr.eu-west-1.amazonaws.com/subhan-test
+          docker build . -t hello
+          docker tag hello 244530008913.dkr.ecr.eu-west-1.amazonaws.com/subhan-test:$rev
+          docker push 244530008913.dkr.ecr.eu-west-1.amazonaws.com/subhan-test:$rev
